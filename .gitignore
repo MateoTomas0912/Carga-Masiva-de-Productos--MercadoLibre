@@ -30,3 +30,6 @@ VENV/
 # Otros
 .DS_Store
 Thumbs.db
+# Ignorar archivo de tokens
+token_data.json
+
