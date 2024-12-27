@@ -104,30 +104,62 @@ Imagen2       | url_imagen2  | url_imagen4
 ```
 
 ---
+## Tecnologías Utilizadas
 
-## Instalación
+- **FastAPI**: Framework para la construcción de la API.
+- **OpenAI API**: Para formatear datos de productos y generar información compatible con MercadoLibre.
+- **Pandas**: Para procesar y analizar datos del archivo Excel.
+- **httpx**: Para realizar solicitudes HTTP asíncronas a la API de MercadoLibre.
+- **openpyxl**: Para leer archivos Excel.
+- **JSON**: Para manejar conversiones de datos.
+- **python-dotenv**: Para manejar variables de entorno de manera segura con `from dotenv import load_dotenv`.
 
-1. Clonar el repositorio:
+---
+
+## Instalación y Configuración
+
+1. Clona el repositorio:
    ```bash
-   git clone <URL_DEL_REPOSITORIO>
-   cd <NOMBRE_DEL_REPOSITORIO>
+   git clone https://github.com/MateoTomas0912/Carga-Masiva-de-Productos--MercadoLibre.git
    ```
 
-2. Crear un entorno virtual y activarlo:
+2. Accede al directorio del proyecto:
    ```bash
-   python -m venv venv
-   source venv/bin/activate  # En Windows: venv\Scripts\activate
+   cd Carga-Masiva-de-Productos--MercadoLibre
    ```
 
-3. Instalar dependencias:
+3. Crea un entorno virtual y actívalo:
+   - En Windows:
+     ```bash
+     python -m venv venv
+     venv\Scripts\activate
+     ```
+   - En Linux/MacOS:
+     ```bash
+     python3 -m venv venv
+     source venv/bin/activate
+     ```
+
+4. Instala las dependencias:
    ```bash
    pip install -r requirements.txt
    ```
 
-4. Ejecutar la aplicación:
-   ```bash
-   uvicorn app:app --reload
+5. Crea un archivo `.env` en el directorio raíz con las siguientes variables y sus valores correspondientes:
+   ```env
+   OPENAI_KEY=your_openai_key
+   IS_ATTRIBUTES_IN_ROWS=False
+   BUYING_MODE=buy_it_now
+   LISTING_TYPE_ID=gold_special
+   CLIENT_SECRET=your_client_secret
+   CLIENT_ID=your_client_id
    ```
+
+6. Ejecuta la aplicación:
+   ```bash
+   uvicorn main:app --reload
+   ```
+
 
 ---
 
