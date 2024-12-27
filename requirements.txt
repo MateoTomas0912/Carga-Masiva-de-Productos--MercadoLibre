@@ -1,0 +1,6 @@
+fastapi
+httpx
+openai
+pandas
+openpyxl
+uvicorn

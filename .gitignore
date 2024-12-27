@@ -1,0 +1,32 @@
+# Python general
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.log
+
+# Entornos virtuales
+env/
+venv/
+ENV/
+VENV/
+
+# Archivos de configuración y dependencias
+*.env
+*.ini
+*.cfg
+
+# Configuración de IDEs
+.vscode/
+.idea/
+*.swp
+
+# Archivos de datos
+*.db
+*.sqlite3
+*.xls
+*.xlsx
+
+# Otros
+.DS_Store
+Thumbs.db
